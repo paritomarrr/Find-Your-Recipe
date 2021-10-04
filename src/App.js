@@ -15,29 +15,7 @@ function App() {
   //adding item to link
   const [query, setQuery] = useState("burger")
 
-  //rendering items everytime user hits the search btn
-  useEffect(() => {
-  getRecipes()
-  }, [query])
-
-
-  //api fetch function
-   const getRecipes = async () => {
-   const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${app_id}&app_key=${app_key}`)
-   const data = await response.json()
-   setRecipes(data.hits)
- }
-
-
- const changeHandler = e => {
-   setSearch(e.target.value)
- }
-
- //prevent from rendering after entering every letter
- const searchHandler = e => {
-   e.preventDefault()
-   setQuery(search)
- }
+ 
 
 
   return (
