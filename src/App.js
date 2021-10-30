@@ -8,7 +8,13 @@ function App() {
   const app_id = '50f547f7'
   const app_key = 'eece7a5e351a07ab9a92cfcc2f1438cb'
 
-  
+  //data fetch from api
+  const [recipes, setRecipes] = useState([])
+  //searching for item
+  const [search, setSearch] = useState("")
+  //adding item to link
+  const [query, setQuery] = useState("burger")
+
  
 
 
